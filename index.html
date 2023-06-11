@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guess My Numbers!" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Numbers" />
+    <meta name="author" content="Giacomo Latini" />
+    <title>Guess My Number</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  </head>
+  <body>
+    <header class="grid-container">
+      <button class="btn again item1">Again!</button>
+      <p class="between item2">(Between 1 and 900)</p>
+      <h1 class="item3">Guess My Number!</h1>
+      <div class="number item4">?</div>
+    </header>
+    <main>
+      <section class="left">
+        <input type="number" class="guess" />
+        <button class="btn check">Check!</button>
+      </section>
+      <section class="right">
+        <p class="message">Start guessing...</p>
+        <!--SCORE rappresenta il numero di tentativi che ha l'utente-->
+        <p class="label-score">
+          &#128175; Score: <span class="score">20</span>
+        </p>
+        <p class="label-highscore">
+          &#129351; Highscore: <span class="highscore">0</span>
+        </p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

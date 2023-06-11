@@ -1,0 +1,157 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --white-color: #eeeeee;
+  --black-color: #222222;
+  --btnhover-color: #ccc;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Press Start 2P", cursive;
+  color: var(--white-color);
+  background-color: var(--black-color);
+}
+
+/*HEADER*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 1rem;
+  border-bottom: 7px solid var(--white-color);
+  padding: 1rem;
+}
+.item1 {
+  grid-column: 1/3;
+}
+.item3,
+.item4 {
+  grid-column: 1/4;
+}
+h1,
+.number {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-align: center;
+}
+h1 {
+  top: 5%;
+  font-size: 4rem;
+  width: 100%;
+}
+.btn,
+.number {
+  border: none;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  font-family: inherit;
+}
+.btn {
+  font-size: 2rem;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--btnhover-color);
+}
+.again {
+  max-width: 40vw;
+  height: 2.5vh;
+  font-size: 1rem;
+}
+.between {
+  height: 36px;
+  font-size: 1rem;
+  text-align: right;
+  padding-top: 2px;
+  padding-right: 1px;
+}
+.number {
+  bottom: 0;
+  padding: 3rem 0rem;
+  width: 15rem;
+  font-size: 6rem;
+}
+
+/*MAIN*/
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 65vh;
+  color: var(--white-color);
+  column-gap: 2rem;
+  padding: 1rem;
+}
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 52rem;
+}
+.left {
+  align-items: center;
+}
+.right {
+  font-size: 2rem;
+}
+.guess {
+  font-family: inherit;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  border: 4px solid var(--white-color);
+  font-size: 5rem;
+  padding: 2.5rem;
+  width: 25rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.message {
+  margin-bottom: 8rem;
+  height: 3rem;
+}
+
+.label-score {
+  margin-bottom: 2rem;
+}
+/*MEDIA QUERY*/
+@media screen and (max-width: 529px) {
+  .guess {
+    width: 18rem;
+  }
+}
+@media screen and (max-width: 595px) {
+  .right {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 639px) {
+  .between {
+    width: 200px;
+    height: 36px;
+    font-size: 1rem;
+    text-align: right;
+    padding-top: 2px;
+    padding-right: 1px;
+  }
+}
+@media screen and (min-width: 660px) {
+  h1 {
+    position: relative;
+    top: 50%;
+  }
+}
